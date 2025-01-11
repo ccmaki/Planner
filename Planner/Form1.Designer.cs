@@ -29,16 +29,27 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            checkBox1 = new CheckBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(289, 279);
+            button1.Location = new Point(274, 158);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(265, 133);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(99, 19);
+            checkBox1.TabIndex = 1;
+            checkBox1.Text = "bading ka ba?";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -46,15 +57,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             ClientSize = new Size(700, 700);
+            Controls.Add(checkBox1);
             Controls.Add(button1);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button button1;
+        private CheckBox checkBox1;
     }
 }
