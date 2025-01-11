@@ -30,6 +30,7 @@
         {
             button1 = new Button();
             checkBox1 = new CheckBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -51,12 +52,22 @@
             checkBox1.Text = "bading ka ba?";
             checkBox1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(333, 68);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 15);
+            label1.TabIndex = 2;
+            label1.Text = "bading";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             ClientSize = new Size(700, 700);
+            Controls.Add(label1);
             Controls.Add(checkBox1);
             Controls.Add(button1);
             Name = "Form1";
@@ -70,5 +81,6 @@
 
         private Button button1;
         private CheckBox checkBox1;
+        private Label label1;
     }
 }
