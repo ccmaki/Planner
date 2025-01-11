@@ -33,7 +33,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(317, 188);
+            button1.Location = new Point(289, 279);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -44,9 +44,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            AutoValidate = AutoValidate.EnableAllowFocusChange;
+            ClientSize = new Size(700, 700);
             Controls.Add(button1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
         }
