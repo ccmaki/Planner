@@ -28,48 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            checkBox1 = new CheckBox();
             label1 = new Label();
+            listView1 = new ListView();
+            add = new Button();
+            delete = new Button();
+            button1 = new Button();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(274, 158);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(265, 133);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(99, 19);
-            checkBox1.TabIndex = 1;
-            checkBox1.Text = "bading ka ba?";
-            checkBox1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(333, 68);
+            label1.Font = new Font("Rodetta", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(382, 9);
             label1.Name = "label1";
-            label1.Size = new Size(44, 15);
+            label1.Size = new Size(301, 73);
             label1.TabIndex = 2;
-            label1.Text = "bading";
+            label1.Text = "Planner";
+            // 
+            // listView1
+            // 
+            listView1.BackColor = Color.FromArgb(255, 255, 192);
+            listView1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listView1.Location = new Point(44, 85);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(1004, 395);
+            listView1.TabIndex = 3;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
+            // 
+            // add
+            // 
+            add.BackColor = Color.FromArgb(192, 255, 192);
+            add.Location = new Point(172, 507);
+            add.Name = "add";
+            add.Size = new Size(85, 42);
+            add.TabIndex = 4;
+            add.Text = "Add";
+            add.UseVisualStyleBackColor = false;
+            add.Click += add_Click;
+            // 
+            // delete
+            // 
+            delete.BackColor = Color.FromArgb(255, 192, 192);
+            delete.Location = new Point(806, 507);
+            delete.Name = "delete";
+            delete.Size = new Size(85, 42);
+            delete.TabIndex = 5;
+            delete.Text = "Delete";
+            delete.UseVisualStyleBackColor = false;
+            delete.Click += this.delete_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(192, 255, 255);
+            button1.Location = new Point(494, 507);
+            button1.Name = "button1";
+            button1.Size = new Size(85, 42);
+            button1.TabIndex = 6;
+            button1.Text = "Edit";
+            button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
-            ClientSize = new Size(700, 700);
-            Controls.Add(label1);
-            Controls.Add(checkBox1);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(1084, 561);
             Controls.Add(button1);
+            Controls.Add(delete);
+            Controls.Add(add);
+            Controls.Add(listView1);
+            Controls.Add(label1);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -78,9 +108,10 @@
         }
 
         #endregion
-
-        private Button button1;
-        private CheckBox checkBox1;
         private Label label1;
+        private ListView listView1;
+        private Button add;
+        private Button delete;
+        private Button button1;
     }
 }
