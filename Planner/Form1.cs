@@ -9,7 +9,8 @@ namespace Planner
 
         private void add_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new Add().Show();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

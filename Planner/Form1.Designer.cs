@@ -49,7 +49,7 @@
             // 
             listView1.BackColor = Color.FromArgb(255, 255, 192);
             listView1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listView1.Location = new Point(44, 85);
+            listView1.Location = new Point(36, 85);
             listView1.Name = "listView1";
             listView1.Size = new Size(1004, 395);
             listView1.TabIndex = 3;
@@ -70,13 +70,12 @@
             // delete
             // 
             delete.BackColor = Color.FromArgb(255, 192, 192);
-            delete.Location = new Point(806, 507);
+            delete.Location = new Point(802, 507);
             delete.Name = "delete";
             delete.Size = new Size(85, 42);
             delete.TabIndex = 5;
             delete.Text = "Delete";
             delete.UseVisualStyleBackColor = false;
-            delete.Click += this.delete_Click;
             // 
             // button1
             // 
