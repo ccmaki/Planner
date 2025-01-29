@@ -51,7 +51,7 @@ namespace Planner
                     MySqlConnection con = new MySqlConnection();
                     con.ConnectionString = connstring;
                     con.Open();
-                    string sql = "INSERT INTO task_table(task, status, deadline, description) VALUES('" + textBox1.Text + "', '"+status+"', '"+ textBox2.Text + "', '"+ textBox3.Text+"'; ";
+                    string sql = "INSERT INTO task_table(task, status, deadline, description) VALUES('"+textBox1.Text+"', '"+status+"', '"+textBox2.Text+"', '"+ textBox3.Text+"'); ";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     MySqlDataReader reader = cmd.ExecuteReader();
                     if (textBox1.Text != "" && status != 0)
