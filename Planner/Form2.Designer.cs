@@ -40,22 +40,24 @@
             label3 = new Label();
             panel1 = new Panel();
             button2 = new Button();
+            cancel_btn = new Button();
             SuspendLayout();
             // 
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(50, 26);
+            textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(53, 70);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(385, 37);
+            textBox1.Size = new Size(532, 60);
             textBox1.TabIndex = 0;
             // 
             // task_label
             // 
             task_label.AutoSize = true;
             task_label.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            task_label.Location = new Point(216, 69);
+            task_label.Location = new Point(259, 136);
             task_label.Name = "task_label";
             task_label.Size = new Size(50, 25);
             task_label.TabIndex = 1;
@@ -65,7 +67,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(572, 69);
+            label1.Location = new Point(821, 136);
             label1.Name = "label1";
             label1.Size = new Size(90, 25);
             label1.TabIndex = 3;
@@ -74,17 +76,18 @@
             // textBox2
             // 
             textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(489, 26);
+            textBox2.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(646, 70);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(251, 37);
+            textBox2.Size = new Size(431, 60);
             textBox2.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(340, 211);
+            label2.Location = new Point(480, 309);
             label2.Name = "label2";
             label2.Size = new Size(114, 25);
             label2.TabIndex = 5;
@@ -93,10 +96,11 @@
             // textBox3
             // 
             textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(50, 120);
+            textBox3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(39, 187);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(690, 88);
+            textBox3.Size = new Size(1024, 119);
             textBox3.TabIndex = 4;
             // 
             // notStarted
@@ -104,7 +108,7 @@
             notStarted.AutoSize = true;
             notStarted.BackColor = Color.FromArgb(255, 255, 192);
             notStarted.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            notStarted.Location = new Point(159, 274);
+            notStarted.Location = new Point(318, 395);
             notStarted.Name = "notStarted";
             notStarted.Size = new Size(135, 29);
             notStarted.TabIndex = 8;
@@ -117,7 +121,7 @@
             inProgress.AutoSize = true;
             inProgress.BackColor = Color.FromArgb(255, 255, 192);
             inProgress.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            inProgress.Location = new Point(338, 274);
+            inProgress.Location = new Point(497, 395);
             inProgress.Name = "inProgress";
             inProgress.Size = new Size(131, 29);
             inProgress.TabIndex = 9;
@@ -130,7 +134,7 @@
             Completed.AutoSize = true;
             Completed.BackColor = Color.FromArgb(255, 255, 192);
             Completed.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Completed.Location = new Point(515, 274);
+            Completed.Location = new Point(674, 395);
             Completed.Name = "Completed";
             Completed.Size = new Size(127, 29);
             Completed.TabIndex = 10;
@@ -143,7 +147,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.FromArgb(255, 255, 192);
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(368, 328);
+            label3.Location = new Point(527, 449);
             label3.Name = "label3";
             label3.Size = new Size(67, 25);
             label3.TabIndex = 11;
@@ -153,7 +157,7 @@
             // 
             panel1.BackColor = Color.FromArgb(255, 255, 192);
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Location = new Point(134, 260);
+            panel1.Location = new Point(293, 381);
             panel1.Name = "panel1";
             panel1.Size = new Size(528, 103);
             panel1.TabIndex = 12;
@@ -162,7 +166,7 @@
             // 
             button2.BackColor = Color.FromArgb(192, 255, 192);
             button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(360, 383);
+            button2.Location = new Point(368, 517);
             button2.Name = "button2";
             button2.Size = new Size(85, 42);
             button2.TabIndex = 14;
@@ -170,12 +174,25 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // cancel_btn
+            // 
+            cancel_btn.BackColor = Color.FromArgb(255, 192, 192);
+            cancel_btn.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cancel_btn.Location = new Point(637, 517);
+            cancel_btn.Name = "cancel_btn";
+            cancel_btn.Size = new Size(85, 42);
+            cancel_btn.TabIndex = 15;
+            cancel_btn.Text = "Cancel";
+            cancel_btn.UseVisualStyleBackColor = false;
+            cancel_btn.Click += delete_Click;
+            // 
             // Add
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1100, 600);
+            Controls.Add(cancel_btn);
             Controls.Add(button2);
             Controls.Add(label3);
             Controls.Add(Completed);
@@ -190,6 +207,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Add";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "add";
             ResumeLayout(false);
             PerformLayout();
@@ -209,5 +227,6 @@
         private Label label3;
         private Panel panel1;
         private Button button2;
+        private Button cancel_btn;
     }
 }

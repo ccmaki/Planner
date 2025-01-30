@@ -35,29 +35,29 @@ namespace Planner
             {
                 try
                 {
-                    int status = 0;
+                    string status = "a";
                     if (notStarted.Checked == true)
                     {
-                        status = 1;
-                    }else if (inProgress.Checked == true)
-                    {
-                        status = 2;
+                        status = "Not Started";
                     }
-                    else if(Completed.Checked == true)
+                    else if (inProgress.Checked == true)
                     {
-                        status = 3;    
+                        status = "In Progress";
+                    }
+                    else if (Completed.Checked == true)
+                    {
+                        status = "Completed";
                     }
                     string connstring = "server=localhost; uid=root; pwd=admin; database=planner";
                     MySqlConnection con = new MySqlConnection();
                     con.ConnectionString = connstring;
                     con.Open();
-                    string sql = "INSERT INTO task_table(task, status, deadline, description) VALUES('"+textBox1.Text+"', '"+status+"', '"+textBox2.Text+"', '"+ textBox3.Text+"'); ";
+                    string sql = "INSERT INTO task_table(task, status, deadline, description) VALUES('" + textBox1.Text + "', '" + status + "', '" + textBox2.Text + "', '" + textBox3.Text + "'); ";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     MySqlDataReader reader = cmd.ExecuteReader();
-                    if (textBox1.Text != "" && status != 0)
+                    if (textBox1.Text != "" && status != "a")
                     {
                         this.Hide();
-                        new Form1().Show();
                         con.Close();
                     }
                     else
@@ -74,6 +74,12 @@ namespace Planner
                     MessageBox.Show(ex.ToString());
                 }
             }
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            
         }
     }
 }
