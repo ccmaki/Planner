@@ -30,8 +30,6 @@
         {
             textBox1 = new TextBox();
             task_label = new Label();
-            label1 = new Label();
-            textBox2 = new TextBox();
             label2 = new Label();
             textBox3 = new TextBox();
             notStarted = new RadioButton();
@@ -41,13 +39,14 @@
             panel1 = new Panel();
             button2 = new Button();
             cancel_btn = new Button();
+            monthCalendar1 = new MonthCalendar();
             SuspendLayout();
             // 
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(53, 70);
+            textBox1.Location = new Point(39, 93);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(532, 60);
@@ -57,37 +56,17 @@
             // 
             task_label.AutoSize = true;
             task_label.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            task_label.Location = new Point(259, 136);
+            task_label.Location = new Point(245, 159);
             task_label.Name = "task_label";
             task_label.Size = new Size(50, 25);
             task_label.TabIndex = 1;
             task_label.Text = "Task";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(821, 136);
-            label1.Name = "label1";
-            label1.Size = new Size(90, 25);
-            label1.TabIndex = 3;
-            label1.Text = "Deadline";
-            // 
-            // textBox2
-            // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(646, 70);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(431, 60);
-            textBox2.TabIndex = 2;
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(480, 309);
+            label2.Location = new Point(480, 344);
             label2.Name = "label2";
             label2.Size = new Size(114, 25);
             label2.TabIndex = 5;
@@ -97,7 +76,7 @@
             // 
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(39, 187);
+            textBox3.Location = new Point(39, 222);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(1024, 119);
@@ -186,12 +165,19 @@
             cancel_btn.UseVisualStyleBackColor = false;
             cancel_btn.Click += delete_Click;
             // 
+            // monthCalendar1
+            // 
+            monthCalendar1.Location = new Point(748, 32);
+            monthCalendar1.Name = "monthCalendar1";
+            monthCalendar1.TabIndex = 16;
+            // 
             // Add
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1100, 600);
+            Controls.Add(monthCalendar1);
             Controls.Add(cancel_btn);
             Controls.Add(button2);
             Controls.Add(label3);
@@ -200,8 +186,6 @@
             Controls.Add(notStarted);
             Controls.Add(label2);
             Controls.Add(textBox3);
-            Controls.Add(label1);
-            Controls.Add(textBox2);
             Controls.Add(task_label);
             Controls.Add(textBox1);
             Controls.Add(panel1);
@@ -217,8 +201,6 @@
 
         private TextBox textBox1;
         private Label task_label;
-        private Label label1;
-        private TextBox textBox2;
         private Label label2;
         private TextBox textBox3;
         private RadioButton notStarted;
@@ -228,5 +210,6 @@
         private Panel panel1;
         private Button button2;
         private Button cancel_btn;
+        private MonthCalendar monthCalendar1;
     }
 }

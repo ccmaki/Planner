@@ -13,10 +13,11 @@ namespace Planner
         private void add_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Add f2 = new Add();
-            f2.ShowDialog();
-            f2 = null;
-            this.Show();
+            //Add f2 = new Add();
+            //f2.ShowDialog();
+            //f2 = null;
+            //this.Show();
+            new Add().Show();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

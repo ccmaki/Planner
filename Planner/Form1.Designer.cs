@@ -54,7 +54,7 @@
             // add
             // 
             add.BackColor = Color.FromArgb(192, 255, 192);
-            add.Location = new Point(104, 507);
+            add.Location = new Point(108, 507);
             add.Name = "add";
             add.Size = new Size(85, 42);
             add.TabIndex = 4;
@@ -75,7 +75,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(192, 255, 255);
-            button1.Location = new Point(640, 507);
+            button1.Location = new Point(632, 507);
             button1.Name = "button1";
             button1.Size = new Size(85, 42);
             button1.TabIndex = 6;
@@ -129,7 +129,7 @@
             // Load_btn
             // 
             Load_btn.BackColor = Color.White;
-            Load_btn.Location = new Point(338, 507);
+            Load_btn.Location = new Point(349, 507);
             Load_btn.Name = "Load_btn";
             Load_btn.Size = new Size(85, 42);
             Load_btn.TabIndex = 8;

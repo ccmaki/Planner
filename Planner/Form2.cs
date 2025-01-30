@@ -52,19 +52,20 @@ namespace Planner
                     MySqlConnection con = new MySqlConnection();
                     con.ConnectionString = connstring;
                     con.Open();
-                    string sql = "INSERT INTO task_table(task, status, deadline, description) VALUES('" + textBox1.Text + "', '" + status + "', '" + textBox2.Text + "', '" + textBox3.Text + "'); ";
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
-                    MySqlDataReader reader = cmd.ExecuteReader();
+                    //string sql = "INSERT INTO task_table(task, status, deadline, description) VALUES('" + textBox1.Text + "', '" + status + "', '" + textBox2.Text + "', '" + textBox3.Text + "'); ";
+                    //MySqlCommand cmd = new MySqlCommand(sql, con);
+                    //MySqlDataReader reader = cmd.ExecuteReader();
                     if (textBox1.Text != "" && status != "a")
                     {
                         this.Hide();
+                        new Form1().Show();
                         con.Close();
                     }
                     else
                     {
                         MessageBox.Show("Task and Status is required", "Please Try again", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBox1.Text = "";
-                        textBox2.Text = "";
+                        //textBox2.Text = "";
                         con.Close();
                     }
 
@@ -79,7 +80,8 @@ namespace Planner
         private void delete_Click(object sender, EventArgs e)
         {
             this.Hide();
-            
+            new Form1().Show();
+
         }
     }
 }
