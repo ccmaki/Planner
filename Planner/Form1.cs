@@ -7,6 +7,7 @@ namespace Planner
     {
         public Form1()
         {
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             InitializeComponent();
         }
 
@@ -52,6 +53,18 @@ namespace Planner
             da.Fill(dtbl);
             dataGridView1.DataSource = dtbl;
             con.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows.RemoveAt(rowIndex);
+
         }
     }
 }
