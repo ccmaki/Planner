@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,22 +8,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using Mysqlx.Crud;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Planner
 {
-    public partial class Add : Form
+    public partial class Form3 : Form
     {
-        public Add()
+        private string task;
+        private string status;
+        private string deadline;
+        private string description;
+
+        public Form3(string task, string status, string deadline, string description)
         {
             InitializeComponent();
+            this.task = task;
+            this.status = status;
+            this.deadline = deadline;
+            this.description = description;
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
+            textBox1.Text = task;
+            textBox3.Text = description;
 
+            if (status == "Not Started")
+            {
+                notStarted.Checked = true;
+            }
+            else if (status == "In Progress")
+            {
+                inProgress.Checked = true;
+            }
+            else if (status == "Completed")
+            {
+                Completed.Checked = true;
+            }
+            dateTimePicker1.Value = DateTime.ParseExact(deadline, "dd/MM/yyyy", System.Globalization.CultureInfo.CurrentCulture, System.Globalization.DateTimeStyles.None);
+
+        }
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form1().Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,24 +64,24 @@ namespace Planner
             {
                 try
                 {
-                    string status = "a";
+                    string status1 = "a";
                     if (notStarted.Checked == true)
                     {
-                        status = "Not Started";
+                        status1 = "Not Started";
                     }
                     else if (inProgress.Checked == true)
                     {
-                        status = "In Progress";
+                        status1 = "In Progress";
                     }
                     else if (Completed.Checked == true)
                     {
-                        status = "Completed";
+                        status1 = "Completed";
                     }
                     string connstring = "server=localhost; uid=root; pwd=admin; database=planner";
                     MySqlConnection con = new MySqlConnection();
                     con.ConnectionString = connstring;
                     con.Open();
-                    string sql = "INSERT INTO task_table(task, status, deadline, description) VALUES('" + textBox1.Text + "', '" + status + "', '" + dateTimePicker1.Value.ToShortDateString() + "', '" + textBox3.Text + "'); ";
+                    string sql = "UPDATE task_table SET task ='" + textBox1.Text + "', status = '" + status1 + "', deadline = '" + dateTimePicker1.Value.ToShortDateString() + "', description = '" + textBox3.Text + "' WHERE task = '"+task+"' AND status = '"+status+"' AND deadline = '"+deadline+"' AND description = '"+description+"'; ";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     MySqlDataReader reader = cmd.ExecuteReader();
                     if (textBox1.Text != "" && status != "a")
@@ -75,33 +104,6 @@ namespace Planner
                     MessageBox.Show(ex.ToString());
                 }
             }
-        }
-
-        private void delete_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Form1().Show();
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void task_label_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
