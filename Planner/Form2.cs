@@ -93,5 +93,15 @@ namespace Planner
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void task_label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
