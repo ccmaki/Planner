@@ -46,7 +46,7 @@ namespace Planner
             con.ConnectionString = connstring;
             con.Open();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM task_table;", con);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT task as 'Task', status as 'Status', deadline as 'Deadline', description as 'Description' FROM planner.task_table ;", con);
             DataTable dtbl = new DataTable();
             da.Fill(dtbl);
             dataGridView1.DataSource = dtbl;

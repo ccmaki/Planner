@@ -52,11 +52,11 @@ namespace Planner
                     MySqlConnection con = new MySqlConnection();
                     con.ConnectionString = connstring;
                     con.Open();
-                    string sql = "INSERT INTO task_table(task, status, deadline, description) VALUES('" + textBox1.Text + "', '" + status + "', '" + dateTimePicker1.Value.ToShortDateString() + "', '" + textBox3.Text + "'); ";
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
-                    MySqlDataReader reader = cmd.ExecuteReader();
                     if (textBox1.Text != "" && status != "a")
                     {
+                        string sql = "INSERT INTO task_table(task, status, deadline, description) VALUES('" + textBox1.Text + "', '" + status + "', '" + dateTimePicker1.Value.ToShortDateString() + "', '" + textBox3.Text + "'); ";
+                        MySqlCommand cmd = new MySqlCommand(sql, con);
+                        MySqlDataReader reader = cmd.ExecuteReader();
                         this.Hide();
                         new Form1().Show();
                         con.Close();
