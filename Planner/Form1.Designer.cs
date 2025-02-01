@@ -38,7 +38,6 @@
             delete = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
-            Load_btn = new Button();
             panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -61,7 +60,7 @@
             add.BackColor = Color.PaleGreen;
             add.Cursor = Cursors.Hand;
             add.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            add.Location = new Point(111, 416);
+            add.Location = new Point(180, 453);
             add.Name = "add";
             add.Size = new Size(125, 50);
             add.TabIndex = 4;
@@ -74,7 +73,7 @@
             // 
             delete.BackColor = Color.FromArgb(255, 192, 192);
             delete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            delete.Location = new Point(866, 416);
+            delete.Location = new Point(767, 453);
             delete.Name = "delete";
             delete.Size = new Size(125, 50);
             delete.TabIndex = 5;
@@ -86,7 +85,7 @@
             // 
             button1.BackColor = Color.FromArgb(192, 192, 255);
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(605, 416);
+            button1.Location = new Point(479, 453);
             button1.Name = "button1";
             button1.Size = new Size(125, 50);
             button1.TabIndex = 6;
@@ -146,18 +145,6 @@
             dataGridView1.CellClick += dataGridView1_CellContentClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // Load_btn
-            // 
-            Load_btn.BackColor = Color.LightSkyBlue;
-            Load_btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Load_btn.Location = new Point(351, 416);
-            Load_btn.Name = "Load_btn";
-            Load_btn.Size = new Size(125, 50);
-            Load_btn.TabIndex = 8;
-            Load_btn.Text = "Load";
-            Load_btn.UseVisualStyleBackColor = false;
-            Load_btn.Click += Load_btn_Click;
-            // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaption;
@@ -176,7 +163,6 @@
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(1084, 561);
             Controls.Add(panel1);
-            Controls.Add(Load_btn);
             Controls.Add(button1);
             Controls.Add(delete);
             Controls.Add(add);
